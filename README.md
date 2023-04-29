@@ -26,3 +26,4 @@ Here's the process to create a new MERN-Stack project that starts with the infra
 11. Have fun coding your new project and don't forget to make frequent commits!
 
 #### Congrats
+# VA-shopping-center
