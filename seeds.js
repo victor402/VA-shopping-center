@@ -2,7 +2,7 @@ require("dotenv").config();
 require("./config/database");
 const Category = require("./models/category");
 const Item = require("./models/item");
-const itemSchema = require("./models/itemSchema");
+
 (async function () {
   await Category.deleteMany({});
   const categories = await Category.create([
@@ -12,7 +12,7 @@ const itemSchema = require("./models/itemSchema");
     { name: "Gadget", sortOrder: 45 },
     { name: "Home", sortOrder: 55 },
   ]);
-  await itemSchema.deleteMany({});
+  await Item.deleteMany({});
   const items = await Item.create([
     { name: "Screw Driver", emoji: "🪛", category: categories[0], price: 2.99 },
     { name: "Hammer", emoji: "🔨", category: categories[0], price: 3.99 },
