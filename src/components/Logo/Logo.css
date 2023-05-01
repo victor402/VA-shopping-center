@@ -1,0 +1,12 @@
+.Logo {
+  height: 12vmin;
+  width: 12vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 50%;
+  align-items: center;
+  background-color: grey;
+  font-size: medium;
+  border: 0.6vmin;
+}
