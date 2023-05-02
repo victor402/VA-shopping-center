@@ -27,4 +27,4 @@ const Item = require("./models/item");
   ]);
   console.log(items);
   process.exit();
-});
+})();
