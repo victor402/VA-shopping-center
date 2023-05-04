@@ -26,12 +26,13 @@ app.use(require("./config/checkToken"));
 // API routes here
 app.use("/api/users", userRouter);
 
+const ensureLoggedIn = require("./config/ensureLoggedIn");
+app.use("/api/items", ensureLoggedIn, require("./routes/api/items"));
+
 // "Catch all" route
 app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
-const ensureLoggedIn = require("./config/ensureLoggedIn");
-app.use("/api/items", ensureLoggedIn, require("./routes/api/items"));
 
 const port = process.env.PORT || 3001;
 

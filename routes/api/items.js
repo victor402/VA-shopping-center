@@ -1,10 +1,9 @@
-import sendRequest from "./send-request";
+const express = require("express");
+const router = express.Router();
+const itemsCtrl = require("../../controllers/api/items");
 
-const BASE_URL = "/api/items";
+router.get("/", itemsCtrl.index);
 
-export function getAll() {
-  return sendRequest(BASE_URL);
-}
-export function getById(id) {
-  return sendRequest(`${BASE_URL}/${id}`);
-}
+router.get("/:id", itemsCtrl.show);
+
+module.exports = router;

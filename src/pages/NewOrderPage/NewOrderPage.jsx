@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
+import * as itemsAPI from "../../utilities/api/items";
 export default function NewOrderPage() {
-  const [catalogueOfItems, setcatalogueOfItems] = useState([]);
+  const [catalogueOfItems, setCatalogueOfItems] = useState([]);
   useEffect(function () {
     console.log("NewOrderpage rendered");
   });
@@ -10,14 +11,14 @@ export default function NewOrderPage() {
   useEffect(async function () {
     async function getItems() {
       const items = await itemsAPI.getAll();
-      setMenuItems(items);
+      setCatalogueOfItems(items);
     }
     getItems();
   }, []);
   return (
     <>
       <h1>NewOrderPage</h1>;
-      <button onClick={catalogueOfMenuItems}>Trigger render</button>
+      <button onClick={catalogueOfItems}>Trigger render</button>
     </>
   );
 }
