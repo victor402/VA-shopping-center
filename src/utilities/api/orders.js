@@ -25,3 +25,6 @@ export function checkout() {
   // Changing data on the server, so make it a POST request
   return sendRequest(`${BASE_URL}/cart/checkout`, "POST");
 }
+export function getPaidOrdersByUser(userId) {
+  return sendRequest(`api/users/${userId}/orders`);
+}

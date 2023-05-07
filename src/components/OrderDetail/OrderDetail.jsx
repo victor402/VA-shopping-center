@@ -1,12 +1,16 @@
 import "./OrderDetail.css";
 import LineItem from "../LineItem/LineItem";
 
-export default function OrderDetail({ order, handleChangeQty, checkOut }) {
+export default function OrderDetail({
+  order,
+  handleChangeQty,
+  handleCheckOut,
+}) {
   if (!order) return null;
   const lineItems = order.lineItems.map((item) => (
     <LineItem
       handleChangeQty={handleChangeQty}
-      LineItem={item}
+      lineItem={item}
       isPaid={order.isPaid}
       key={item._id}
     />
@@ -35,7 +39,7 @@ export default function OrderDetail({ order, handleChangeQty, checkOut }) {
               ) : (
                 <button
                   className="btn-sm"
-                  onClick={checkOut}
+                  onClick={handleCheckOut}
                   disabled={!lineItems.length}
                 >
                   CHECKOUT
