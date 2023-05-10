@@ -1,14 +1,6 @@
 const Order = require("../../models/order");
 const Item = require("../../models/item");
 
-module.exports = {
-  index,
-  cart,
-  addToCart,
-  setItemQtyInCart,
-  checkout,
-};
-
 async function index(req, res, next) {
   const paidOrders = await Order.getPaidOrders(req.user._id);
   res.json(paidOrders);
@@ -59,3 +51,23 @@ async function checkout(req, res) {
   await cart.save();
   res.json(cart);
 }
+
+async function orderHistory(req, res) {
+  try {
+    const orders = await Order.find({ user: req.user._id, isPaid: true }).sort(
+      "-updatedAt"
+    );
+    res.json(orders);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+module.exports = {
+  index,
+  cart,
+  addToCart,
+  setItemQtyInCart,
+  checkout,
+  orderHistory,
+};

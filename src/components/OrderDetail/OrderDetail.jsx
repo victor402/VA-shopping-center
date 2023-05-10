@@ -50,7 +50,7 @@ export default function OrderDetail({
             </section>
           </>
         ) : (
-          <div className="hungry">Hungry?</div>
+          <div className="hungry">shop?</div>
         )}
       </div>
     </div>

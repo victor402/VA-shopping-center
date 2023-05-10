@@ -8,5 +8,5 @@
   align-items: center;
   background-color: grey;
   font-size: medium;
-  border: 0.6vmin;
+  border: 0.6vmin solid var(--tan-2);
 }
