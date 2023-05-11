@@ -13,7 +13,10 @@ export default function OrderHistoryPage({ user, setUser }) {
 
   useEffect(function () {
     async function getOrders() {
+      console.log("useeffect running");
+
       const orders = await ordersAPI.getAllOrderHistory();
+      console.log(orders);
 
       setOrders(orders);
       setSelectedOrder(orders[0]);

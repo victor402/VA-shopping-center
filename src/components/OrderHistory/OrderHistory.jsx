@@ -8,7 +8,7 @@ export default function OrderHistory({
 }) {
   const orderItems = orders.map((o) => (
     <OrderItem
-      orders={o}
+      order={o}
       isSelected={o === selectedOrder}
       setSelectedOrder={setSelectedOrder}
       key={o._id}

@@ -27,6 +27,6 @@ export function checkout() {
   return sendRequest(`${BASE_URL}/cart/checkout`, "POST");
 }
 export function getAllOrderHistory() {
-  console.log(getAllOrderHistory);
+  console.log("getAllOrderHistory");
   return sendRequest(`${BASE_URL}/user`);
 }

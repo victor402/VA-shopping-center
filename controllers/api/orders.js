@@ -57,6 +57,7 @@ async function orderHistory(req, res) {
     const orders = await Order.find({ user: req.user._id, isPaid: true }).sort(
       "-updatedAt"
     );
+    console.log(orders);
     res.json(orders);
   } catch (error) {
     console.log(error);
