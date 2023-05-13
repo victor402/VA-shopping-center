@@ -18,10 +18,6 @@ export default function NewOrderPage({ user, setUser }) {
   const [cart, setCart] = useState();
   const navigate = useNavigate();
 
-  // useEffect(function () {
-  //   console.log("NewOrderpage rendered");
-  // });
-
   useEffect(async function () {
     async function getItems() {
       const items = await itemsAPI.getAll();
@@ -39,19 +35,16 @@ export default function NewOrderPage({ user, setUser }) {
     }
     getCart();
   }, []);
-  /*--- Event Handlers --- */
+
   async function handleAddToOrder(itemId) {
     const updatedCart = await ordersAPI.addItemToCart(itemId);
     setCart(updatedCart);
   }
 
-  // Add this function
   async function handleChangeQty(itemId, newQty) {
     const updatedCart = await ordersAPI.setItemQtyInCart(itemId, newQty);
     setCart(updatedCart);
   }
-
-  // NewOrderPage.jsx
 
   async function handleCheckOut() {
     await ordersAPI.checkout();
@@ -70,21 +63,7 @@ export default function NewOrderPage({ user, setUser }) {
           />
         </div>
         <div className="NewOrderPage">
-          {/* <div className="Header">
-            <Logo />
-            <CategoryList
-              categories={categoriesRef.current}
-              activeCat={activeCat}
-              setActiveCat={setActiveCat}
-            />
-          </div> */}
           <aside>
-            {/* <Logo />
-            <CategoryList
-              categories={categoriesRef.current}
-              activeCat={activeCat}
-              setActiveCat={setActiveCat}
-            /> */}
             <Link to="/orders" className="button btn-sm">
               ORDER HISTORY
             </Link>
@@ -96,7 +75,6 @@ export default function NewOrderPage({ user, setUser }) {
               (item) => item.category.name === activeCat
             )}
             handleAddToOrder={handleAddToOrder}
-            //catalogueOfItems={catalogueOfItem}
           />
           <OrderDetail
             order={cart}

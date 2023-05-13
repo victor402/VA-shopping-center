@@ -20,6 +20,8 @@
     <li>CSS</li>
     <li>Javascript</li>
     <li>mongoose</li>
+    <li>MongoDB</li>
+    <li>Express</li>
     <li>Html</li>
   </ul>
 
