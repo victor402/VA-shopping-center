@@ -7,8 +7,11 @@
 ### Screenshots:
 
 ![login](/login.png)
+
 ![order](/order.png)
+
 ![history](/history.png)
+
 ![ERD](/wireframe.png)
 
 - <h3>Technologies Used:</h3>
