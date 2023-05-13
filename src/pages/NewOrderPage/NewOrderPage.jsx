@@ -60,34 +60,50 @@ export default function NewOrderPage({ user, setUser }) {
 
   return (
     <>
-      <main className="NewOrderPage">
-        <aside>
+      <main>
+        <div className="Header">
           <Logo />
-
           <CategoryList
             categories={categoriesRef.current}
             activeCat={activeCat}
             setActiveCat={setActiveCat}
           />
+        </div>
+        <div className="NewOrderPage">
+          {/* <div className="Header">
+            <Logo />
+            <CategoryList
+              categories={categoriesRef.current}
+              activeCat={activeCat}
+              setActiveCat={setActiveCat}
+            />
+          </div> */}
+          <aside>
+            {/* <Logo />
+            <CategoryList
+              categories={categoriesRef.current}
+              activeCat={activeCat}
+              setActiveCat={setActiveCat}
+            /> */}
+            <Link to="/orders" className="button btn-sm">
+              ORDER HISTORY
+            </Link>
+            <UserLogOut user={user} setUser={setUser} />
+          </aside>
 
-          <Link to="/orders" className="button btn-sm">
-            ORDER HISTORY
-          </Link>
-          <UserLogOut user={user} setUser={setUser} />
-        </aside>
-
-        <CatalogueList
-          catalogueOfItems={catalogueOfItems.filter(
-            (item) => item.category.name === activeCat
-          )}
-          handleAddToOrder={handleAddToOrder}
-          //catalogueOfItems={catalogueOfItem}
-        />
-        <OrderDetail
-          order={cart}
-          handleChangeQty={handleChangeQty}
-          handleCheckOut={handleCheckOut}
-        />
+          <CatalogueList
+            catalogueOfItems={catalogueOfItems.filter(
+              (item) => item.category.name === activeCat
+            )}
+            handleAddToOrder={handleAddToOrder}
+            //catalogueOfItems={catalogueOfItem}
+          />
+          <OrderDetail
+            order={cart}
+            handleChangeQty={handleChangeQty}
+            handleCheckOut={handleCheckOut}
+          />
+        </div>
       </main>
     </>
   );
