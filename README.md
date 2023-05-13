@@ -1,30 +1,28 @@
-## Using `mern-infrastructure` to Create MERN-Stack Projects
+# project-4
 
-Here's the process to create a new MERN-Stack project that starts with the infrastructure code:
+- <h1>This is Victor Anagha Shopping Centre</h1>
 
-1. Clone the **mern-infrastructure** repo: `git clone <url of mern-infrastructure> <name-of-project>`
-    > Note that the folder created will be same as `<name-of-project>` instead of mern-infrastructure
+- <h5>This app is an online shopping centre.In this app there is a list of items to shop from and the list of items are grouped into catalogue. The variety of items you can shop from this app are items for building, school items, home items, electronics and gadgets. After shopping, you can checkout. You can  later view the items you have shopped before when you sign in another time to shop. </h5>
 
-2. `cd <name-of-project>`
+- <h3>Technologies Used:</h3>
+  <ul>
+    <li>React</li>
+    <li>CSS</li>
+    <li>Javascript</li>
+    <li>mongoose</li>
+    <li>Html</li>
+  </ul>
 
-3. Install the Node modules:  `npm i`
+- <h3>Getting started:</h3>
+  <h5>https://github.com/victor402/VA-shopping-center</h5>
+  <h5>https://va-shopping-center.herokuapp.com/</h5>
 
-4. Create a .env (`touch .env`) and add entries for `DATABASE_URL` and `SECRET`
-
-5. Update the `"name": "mern-infrastructure"` in **package.json** to the name of your project.
-
-6. Create a new repo on your personal GH account.
-
-7. Copy the new GH repo's URL.
-
-8. Update the remote's URL: `git remote set-url origin <paste the copied GH url>`
-
-9. Make the initial commit:  `git add -A && git commit -m "Initial commit"`
-
-10. Push for the first time:  `git push -u origin main`
-
-11. Have fun coding your new project and don't forget to make frequent commits!
+- <h3>Next Step:</h3>
+  <h5>I plan on adding more items to shop from on the website <h5>
+  <h5>I plan on enhancing the css of the app. Make it more colourful.</h5>
 
 #### Congrats
+
 # VA-shopping-center
+
 # VA-shopping-center
