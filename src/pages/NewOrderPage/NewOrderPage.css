@@ -13,6 +13,7 @@
   justify-content: center;
   align-items: center;
   margin: 3vmin 2vmin;
+  padding-bottom: 60px;
 }
 .Header {
   display: flex;
