@@ -1,11 +1,10 @@
-
-import { Link } from 'react-router-dom';
-import * as userService from '../../utilities/services/users'
+import { Link } from "react-router-dom";
+import * as userService from "../../utilities/services/users";
 
 export default function NavBar({ user, setUser }) {
-  function handleLogOut(){
-    userService.logOut()
-    setUser(null)
+  function handleLogOut() {
+    userService.logOut();
+    setUser(null);
   }
 
   return (
@@ -14,8 +13,10 @@ export default function NavBar({ user, setUser }) {
       &nbsp; | &nbsp;
       <Link to="/orders/new">New Order</Link>
       &nbsp; &nbsp; <span className="name">Hey there {user.name}!</span>
-      &nbsp; &nbsp; <Link to="" onClick={handleLogOut}>Log Out</Link>
-
+      &nbsp; &nbsp;{" "}
+      <Link to="" onClick={handleLogOut}>
+        Log Out
+      </Link>
     </nav>
   );
 }

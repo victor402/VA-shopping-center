@@ -2,7 +2,7 @@ import "./OrderItem.css";
 export default function OrderItem({ order, isSelected, setSelectedOrder }) {
   return (
     <div
-      className={`OrderItem${isSelected ? " selected" : ""}`}
+      className={`OrderItem${isSelected ? " selected " : ""}`}
       onClick={() => setSelectedOrder(order)}
     >
       <div>

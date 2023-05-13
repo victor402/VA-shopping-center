@@ -59,18 +59,23 @@ export default function NewOrderPage({ user, setUser }) {
   }
 
   return (
-    <main className="NewOrderPage">
-      <aside>
-        <Logo />
-        <CategoryList
-          categories={categoriesRef.current}
-          activeCat={activeCat}
-          setActiveCat={setActiveCat}
-        />
-        <Link to="/orders" className="button btn-sm">
-          ORDER HISTORY
-        </Link>
-        <UserLogOut user={user} setUser={setUser} />
+    <>
+      <main className="NewOrderPage">
+        <aside>
+          <Logo />
+
+          <CategoryList
+            categories={categoriesRef.current}
+            activeCat={activeCat}
+            setActiveCat={setActiveCat}
+          />
+
+          <Link to="/orders" className="button btn-sm">
+            ORDER HISTORY
+          </Link>
+          <UserLogOut user={user} setUser={setUser} />
+        </aside>
+
         <CatalogueList
           catalogueOfItems={catalogueOfItems.filter(
             (item) => item.category.name === activeCat
@@ -83,7 +88,7 @@ export default function NewOrderPage({ user, setUser }) {
           handleChangeQty={handleChangeQty}
           handleCheckOut={handleCheckOut}
         />
-      </aside>
-    </main>
+      </main>
+    </>
   );
 }

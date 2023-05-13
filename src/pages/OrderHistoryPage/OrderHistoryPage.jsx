@@ -24,15 +24,6 @@ export default function OrderHistoryPage({ user, setUser }) {
     getOrders();
   }, []);
 
-  // async function handleCheckToken() {
-  //   const expDate = await userServices.checkToken();
-
-  //   console.log(expDate);
-  // }
-  // useEffect(async function () {
-  //   async function getHistory() {}
-  // });
-
   return (
     <main className="OrderHistoryPage">
       <aside>

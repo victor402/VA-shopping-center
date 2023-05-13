@@ -1,4 +1,4 @@
-.OrderListItem {
+.OrderItem {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,12 +13,12 @@
   cursor: pointer;
 }
 
-.OrderListItem.selected,
-.OrderListItem:not(.selected):hover {
+.OrderItem.selected,
+.OrderItem:not(.selected):hover {
   border-color: grey;
   border-width: 0.2vmin;
 }
 
-.OrderListItem.selected {
+.OrderItem.selected {
   cursor: default;
 }

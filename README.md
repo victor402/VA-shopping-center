@@ -1,6 +1,6 @@
 # project-4
 
-- <h1>This is Victor Anagha Shopping Centre</h1>
+- <h1>This is Victor Anagha Shopping Centre(VASC)</h1>
 
 - <h5>This app is an online shopping centre.In this app there is a list of items to shop from and the list of items are grouped into catalogue. The variety of items you can shop from this app are items for building, school items, home items, electronics and gadgets. After shopping, you can checkout. You can  later view the items you have shopped before when you sign in another time to shop. </h5>
 
